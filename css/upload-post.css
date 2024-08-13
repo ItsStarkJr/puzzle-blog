@@ -1,0 +1,128 @@
+/* =========== General =========== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box !important;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  color: darkgrey;
+  background: rgb(0, 0, 60);
+  font-family: sans-serif !important;
+}
+
+.hidden {
+  display: none;
+}
+
+/* =========== Header =========== */
+
+header {
+  background: rgba(255, 255, 255, 0.1) !important;
+  height: 100px !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  padding: 0 2rem !important;
+}
+
+header > h1 {
+  font-size: 100px;
+  font-weight: bold;
+}
+
+input[type="text"] {
+  padding: 10px !important;
+  font-size: 20px;
+  border: none;
+  background: transparent;
+  color: darkgray;
+}
+
+input[type="text"]:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+input[type="text"]:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: darkgray;
+}
+
+/* #copied-tip {
+  position: absolute;
+  background: lightgreen;
+  padding: 1rem;
+  right: 0.5rem;
+  bottom: 0.5rem;
+} */
+
+/* =========== Main container =========== */
+.main-subcontainer {
+  width: min(80%, 1280px);
+  /* background: red; */
+  height: 70%;
+  margin: auto;
+  padding-top: 5rem;
+}
+
+h2 {
+  margin: 1rem 0 !important;
+}
+/* =========== Sidebar Buttons =========== */
+.genre-boxes,
+.tags-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.difficulty > input[type="radio"],
+.variant > input[type="radio"],
+.tags > input[type="checkbox"] {
+  display: none;
+}
+
+.difficulty > label,
+.variant > label,
+.tags > label {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 5px 10px;
+  cursor: pointer;
+  user-select: none;
+  text-transform: capitalize;
+}
+
+.difficulty > input[type="radio"]:checked + label,
+.variant > input[type="radio"]:checked + label,
+.tags > input[type="checkbox"]:checked + label {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+#copy {
+  border: none;
+  background: rgba(255, 255, 255, 0.3);
+  color: white;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+#copy:hover {
+  background: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+}
+
+p {
+  margin: 1rem 0;
+}
+
+#img {
+  margin: 1rem 0;
+  border: none;
+}

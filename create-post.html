@@ -1,0 +1,87 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/upload-post.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon1.ico" />
+    <title>Stark Puzzles</title>
+  </head>
+  <body>
+    <header>
+      <h1>Stark Puzzles</h1>
+    </header>
+    <div class="main-container">
+      <div class="main-subcontainer">
+        <div class="difficulty">
+          <h2>Difficulty</h2>
+          <input id="difficulty-1" type="radio" name="difficulty" value="1" />
+          <label for="difficulty-1">1</label>
+          <input id="difficulty-2" type="radio" name="difficulty" value="2" />
+          <label for="difficulty-2">2</label>
+          <input id="difficulty-3" type="radio" name="difficulty" value="3" />
+          <label for="difficulty-3">3</label>
+          <input id="difficulty-4" type="radio" name="difficulty" value="4" />
+          <label for="difficulty-4">4</label>
+          <input id="difficulty-5" type="radio" name="difficulty" value="5" />
+          <label for="difficulty-5">5</label>
+        </div>
+        <div class="variant">
+          <h2>Variant</h2>
+
+          <input id="variant-yes" type="radio" name="variant" value="yes" />
+          <label for="variant-yes">yes</label>
+          <input id="variant-no" type="radio" name="variant" value="no" />
+          <label for="variant-no">no</label>
+        </div>
+        <div class="genre">
+          <h2>Genre</h2>
+          <p>
+            In case of a hybrid (multiple genres), separate genres by comma.
+          </p>
+          <input id="genre" type="text" placeholder="Genre.." />
+        </div>
+        <div class="tags">
+          <h2>Tags</h2>
+          <input id="drawing" type="checkbox" />
+          <label for="drawing">Drawing</label>
+          <input id="hybrid" type="checkbox" />
+          <label for="hybrid">Hybrid</label>
+          <input id="loop" type="checkbox" />
+          <label for="loop">Loop</label>
+          <input id="number-placement" type="checkbox" />
+          <label for="number-placement">Number placement</label>
+          <input id="object-placement" type="checkbox" />
+          <label for="object-placement">Object placement</label>
+          <input id="pack" type="checkbox" />
+          <label for="pack">Pack</label>
+          <input id="path" type="checkbox" />
+          <label for="path">Path</label>
+          <input id="region-division" type="checkbox" />
+          <label for="region-division">Region division</label>
+          <input id="shading" type="checkbox" />
+          <label for="shading">Shading</label>
+        </div>
+        <div class="title">
+          <h2>Title</h2>
+          <input id="title" type="text" placeholder="Title.." />
+        </div>
+        <div class="intro">
+          <h2>Intro</h2>
+          <input id="intro" type="text" placeholder="Intro.." />
+        </div>
+        <div class="rules">
+          <h2>Rules</h2>
+          <input id="rules" type="text" placeholder="Rules.." />
+        </div>
+
+        <button id="copy">Copy to clipboard</button>
+      </div>
+    </div>
+    <!-- Scripts -->
+    <script src="scripts/create-post.js"></script>
+  </body>
+</html>
