@@ -98,9 +98,10 @@ input[type="text"]:focus {
   height: 50%;
 }
 
-/* .post-top > img:hover {
-  opacity: 1;
-} */
+.thumb-link {
+  text-decoration: none;
+  color: inherit;
+}
 
 .post:hover {
   background: rgba(255, 255, 255, 0.1);
