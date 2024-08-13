@@ -9,6 +9,6 @@ document.querySelectorAll("#share-button").forEach((button) => {
 document.querySelectorAll(".post").forEach((post) => {
   post.addEventListener("click", () => {
     const postID = post.id;
-    window.open(`/posts/${postID}`, "_blank");
+    window.open(`/posts/${postID}/`, "_blank");
   });
 });
