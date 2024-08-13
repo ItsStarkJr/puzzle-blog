@@ -5,10 +5,18 @@
 //   });
 // });
 
-document.querySelectorAll("#share-button").forEach((button) => {
-  button.addEventListener("click", () => {
-    const title = button.previousElementSibling.previousElementSibling;
-    const bob = title.textContent;
-    alert(bob);
+document
+  .getElementById("share-button")
+  .addEventListener("click", function (event) {
+    event.preventDefault();
+    const relativeLink = event.target.closest("a.thumb-link").href;
+    const fullLink = new URL(relativeLink, window.location.origin).href;
+    const tooltip = document.getElementById("copied-tip");
+
+    navigator.clipboard.writeText(fullLink);
+
+    tooltip.classList.remove("hidden");
+    setTimeout(() => {
+      tooltip.classList.add("hidden");
+    }, 1500);
   });
-});

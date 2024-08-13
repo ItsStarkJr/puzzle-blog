@@ -27,3 +27,5 @@ Cosmetics:
 
 - Add max width to post content
 - Undo a tag cosmetics on post thumbs
+- Add share functionality to db thumbnails
+- Add tooltip to db thumbnails
