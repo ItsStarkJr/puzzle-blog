@@ -1,0 +1,26 @@
+Local storage:
+
+- Solved status per post id
+- Full selected status
+
+Class structure
+
+- Add difficulty
+- Add classic/variant
+- Add tags
+
+Side bar:
+
+- Change genres/tags to checkboxes
+- Make radiobuttons invisible
+- Make checkboxes invisible
+
+Search mechanic:
+
+- No results found
+- Clear search results
+- Search for title
+
+Cosmetics:
+
+- Add max width to post content

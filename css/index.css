@@ -1,0 +1,181 @@
+/* =========== General =========== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box !important;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  color: darkgrey;
+  background: rgb(0, 0, 60);
+  font-family: sans-serif !important;
+}
+
+.hidden {
+  display: none;
+}
+
+/* =========== Header =========== */
+
+header {
+  background: rgba(255, 255, 255, 0.1);
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+header > h1 {
+  font-size: 100px;
+}
+
+input[type="text"] {
+  padding: 10px !important;
+  font-size: 20px;
+  border: none;
+  background: transparent;
+  color: darkgray;
+}
+
+input[type="text"]:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+input[type="text"]:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: darkgray;
+}
+
+/* =========== Puzzle Container =========== */
+.main-container {
+  background: transparent;
+  height: 100%;
+  padding: 2rem;
+  display: flex;
+  gap: 1rem;
+}
+
+/* =========== DB Container =========== */
+.db-container {
+  width: 100%;
+  padding: 1rem;
+  /* background: green; */
+}
+
+.db-subcontainer {
+  /* background: red; */
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, 400px);
+  justify-content: center;
+}
+
+/* =========== Puzzle Container =========== */
+.post {
+  background: rgba(255, 255, 255, 0.05);
+  height: 400px;
+}
+
+.post-top {
+  height: 50%;
+}
+.post-top > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+}
+.post-bottom {
+  padding: 1rem;
+  height: 50%;
+}
+
+/* .post-top > img:hover {
+  opacity: 1;
+} */
+
+.post:hover {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 0px 20px 5px rgb(74, 74, 74);
+  cursor: pointer;
+}
+
+.post:hover > .post-top > img {
+  opacity: 1;
+}
+
+/* =========== Sidebar Container =========== */
+.sidebar-container {
+  background: rgba(255, 255, 255, 0.05);
+  width: 300px;
+  padding: 1rem;
+}
+
+.sidebar-container > details {
+  justify-content: center;
+}
+
+.sidebar-container > h2,
+.sidebar-container > details > summary {
+  font-size: 1rem;
+  font-weight: normal;
+}
+.sidebar-container > details > summary {
+  margin-bottom: 0.5rem;
+}
+
+.sidebar-container > h2,
+.sidebar-container > details {
+  margin: 1rem 0;
+}
+
+.post-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* =========== Sidebar Buttons =========== */
+.genre-boxes,
+.tags-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.sidebar-container > input[type="radio"],
+.sidebar-container > details > .genre-boxes > input[type="checkbox"],
+.sidebar-container > details > .tags-boxes > input[type="checkbox"] {
+  display: none;
+}
+
+.sidebar-container > label,
+.sidebar-container > details > .genre-boxes > label,
+.sidebar-container > details > .tags-boxes > label {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 3px 6px;
+  cursor: pointer;
+  user-select: none;
+  text-transform: capitalize;
+}
+
+.sidebar-container
+  > details
+  > .genre-boxes
+  > input[type="checkbox"]:checked
+  + label,
+.sidebar-container > input[type="radio"]:checked + label,
+.sidebar-container
+  > details
+  > .tags-boxes
+  > input[type="checkbox"]:checked
+  + label {
+  background: rgba(255, 255, 255, 0.2);
+}
