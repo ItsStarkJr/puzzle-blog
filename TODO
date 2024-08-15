@@ -4,6 +4,11 @@
 
 # FINISH UPLOADING IMAGE AND COPYING, CODE IN TEST.PY AND INTERFACE
 
+potential way to integrate the html page into the python app: https://www.makeuseof.com/tag/python-javascript-communicate-json/
+
+- Get date in post generator
+- Add links to post adding int
+
 # =
 
 Local storage:
