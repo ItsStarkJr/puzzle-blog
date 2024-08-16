@@ -1,15 +1,11 @@
-# =
+Upload post:
 
-# =
+- Make preview accurate
+- Integrate flask app in larger app to combine with uploading image.
 
-# FINISH UPLOADING IMAGE AND COPYING, CODE IN TEST.PY AND INTERFACE
-
-potential way to integrate the html page into the python app: https://www.makeuseof.com/tag/python-javascript-communicate-json/
+Generate html:
 
 - Get date in post generator
-- Add links to post adding int
-
-# =
 
 Local storage:
 
@@ -42,3 +38,4 @@ Generate RSS feed:
 - Undo a tag cosmetics on post thumbs
 - Add share functionality to db thumbnails
 - Add tooltip to db thumbnails
+- Add links to post adding int

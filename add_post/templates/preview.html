@@ -1,0 +1,50 @@
+{% extends "base.html" %} {% block title %}Stark Puzzles - Preview{% endblock %}
+{% block content %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="../../css/post.css" /> -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Post 1</title>
+  </head>
+  <body>
+    <div class="bg-pic">
+      <img src="../../assets/images/1.png" alt="" />
+    </div>
+    <div class="main-container">
+      <div class="title-container">
+        <div class="title-subcontainer">
+          <h1 class="title">Post #125 - Akari</h1>
+          <p class="subtitle">Aug 12, 2024</p>
+        </div>
+        <div class="share-container">
+          <button id="share-button"><i class="fa fa-share"></i></button>
+          <button id="home-button"><i class="fa fa-home"></i></button>
+          <p id="copied-tip" class="hidden">Link copied!</p>
+        </div>
+      </div>
+      <div class="post-container">
+        <p class="intro">
+
+          {{data.intro}}
+        </p>
+        <h2 class="rules-title">Rules</h2>
+        <p class="rules-description">{{data.rules}}</p>
+        <h3 class="difficulty">Difficulty: {{data.difficulty}}/5</h3>
+        <div class="links">
+          <a href={{data.links['puzz.link']}} target="_blank">Solve on puzzlink</a>
+          <a href={{data.links['sudokupad']}} target="_blank">Solve on sudokupad</a>
+          <a href={{data.links['f-puzzles']}} target="_blank">Solve on f-puzzles</a>
+        </div>
+        <img src="../../assets/images/1.png" alt="" />
+      </div>
+    </div>
+  </body>
+</html>
+
+{% endblock %}

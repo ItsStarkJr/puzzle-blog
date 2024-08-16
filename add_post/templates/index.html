@@ -8,23 +8,30 @@
     <form action="#" method="POST">
       <div class="difficulty">
         <h2>Difficulty</h2>
-        <input id="difficulty-1" type="radio" name="difficulty" value="1" />
+        <input id="difficulty-1" type="radio" name="difficulty" value="1" {% if
+        data.get('difficulty') == '1' %}checked{% endif %}/>
         <label for="difficulty-1">1</label>
-        <input id="difficulty-2" type="radio" name="difficulty" value="2" />
+        <input id="difficulty-2" type="radio" name="difficulty" value="2" {% if
+        data.get('difficulty') == '2' %}checked{% endif %}/>
         <label for="difficulty-2">2</label>
-        <input id="difficulty-3" type="radio" name="difficulty" value="3" />
+        <input id="difficulty-3" type="radio" name="difficulty" value="3" {% if
+        data.get('difficulty') == '3' %}checked{% endif %}/>
         <label for="difficulty-3">3</label>
-        <input id="difficulty-4" type="radio" name="difficulty" value="4" />
+        <input id="difficulty-4" type="radio" name="difficulty" value="4" {% if
+        data.get('difficulty') == '4' %}checked{% endif %}/>
         <label for="difficulty-4">4</label>
-        <input id="difficulty-5" type="radio" name="difficulty" value="5" />
+        <input id="difficulty-5" type="radio" name="difficulty" value="5" {% if
+        data.get('difficulty') == '5' %}checked{% endif %}/>
         <label for="difficulty-5">5</label>
       </div>
 
       <div class="variant">
         <h2>Variant</h2>
-        <input id="variant-yes" type="radio" name="variant" value="yes" />
+        <input id="variant-yes" type="radio" name="variant" value="yes" {% if
+        data.get('variant') == 'yes' %}checked{% endif %} />
         <label for="variant-yes">Yes</label>
-        <input id="variant-no" type="radio" name="variant" value="no" />
+        <input id="variant-no" type="radio" name="variant" value="no" {% if
+        data.get('variant') == 'no' %}checked{% endif %} />
         <label for="variant-no">No</label>
       </div>
 
@@ -37,28 +44,38 @@
           name="genre"
           size="100"
           placeholder="Genre.."
+          value="{{ data.get('genre', '') }}"
         />
       </div>
 
       <div class="tags">
         <h2>Tags</h2>
-        <input id="drawing" type="checkbox" name="drawing" />
+        <input id="drawing" type="checkbox" name="drawing" {% if 'drawing' in
+        data.get('tags', []) %}checked{% endif %} />
         <label for="drawing">Drawing</label>
-        <input id="hybrid" type="checkbox" name="hybrid" />
+        <input id="hybrid" type="checkbox" name="hybrid" {% if 'hybrid' in
+        data.get('tags', []) %}checked{% endif %} />
         <label for="hybrid">Hybrid</label>
-        <input id="loop" type="checkbox" name="loop" />
+        <input id="loop" type="checkbox" name="loop" {% if 'loop' in
+        data.get('tags', []) %}checked{% endif %} />
         <label for="loop">Loop</label>
-        <input id="number-placement" type="checkbox" name="number-placement" />
+        <input id="number-placement" type="checkbox" name="number-placement" {%
+        if 'number-placement' in data.get('tags', []) %}checked{% endif %} />
         <label for="number-placement">Number placement</label>
-        <input id="object-placement" type="checkbox" name="object-placement" />
+        <input id="object-placement" type="checkbox" name="object-placement" {%
+        if 'object-placement' in data.get('tags', []) %}checked{% endif %} />
         <label for="object-placement">Object placement</label>
-        <input id="pack" type="checkbox" name="pack" />
+        <input id="pack" type="checkbox" name="pack" {% if 'pack' in
+        data.get('tags', []) %}checked{% endif %} />
         <label for="pack">Pack</label>
-        <input id="path" type="checkbox" name="path" />
+        <input id="path" type="checkbox" name="path" {% if 'path' in
+        data.get('tags', []) %}checked{% endif %} />
         <label for="path">Path</label>
-        <input id="region-division" type="checkbox" name="region-division" />
+        <input id="region-division" type="checkbox" name="region-division" {% if
+        'region-division' in data.get('tags', []) %}checked{% endif %} />
         <label for="region-division">Region division</label>
-        <input id="shading" type="checkbox" name="shading" />
+        <input id="shading" type="checkbox" name="shading" {% if 'shading' in
+        data.get('tags', []) %}checked{% endif %} />
         <label for="shading">Shading</label>
       </div>
 
@@ -70,6 +87,7 @@
           size="100"
           name="title"
           placeholder="Title.."
+          value="{{ data.get('title', '') }}"
         />
       </div>
 
@@ -81,8 +99,9 @@
           rows="7"
           cols="130"
           placeholder="Intro.."
-        ></textarea>
-        <!-- <input id="intro" type="text" name="intro" placeholder="Intro.." /> -->
+        >
+{{ data.get('intro', '') }}</textarea
+        >
       </div>
 
       <div class="rules">
@@ -93,7 +112,9 @@
           rows="7"
           cols="130"
           placeholder="Rules.."
-        ></textarea>
+        >
+{{ data.get('rules', '') }}</textarea
+        >
       </div>
       <div class="links">
         <h2>Links</h2>
@@ -102,17 +123,26 @@
           type="text"
           name="puzz.link"
           placeholder="puzz.link.."
+          value="{{ data['links'].get('puzz.link', '') if 'links' in data else '' }}"
         />
         <input
           id="sudokupad"
           type="text"
           name="sudokupad"
           placeholder="sudokupad.."
+          value="{{ data['links'].get('sudokupad', '') if 'links' in data else '' }}"
         />
-        <input id="penpa" type="text" name="penpa" placeholder="penpa.." />
+        <input
+          id="penpa"
+          type="text"
+          name="penpa"
+          placeholder="penpa.."
+          value="{{ data['links'].get('penpa', '') if 'links' in data else '' }}"
+        />
       </div>
 
       <button type="submit">Submit</button>
+      <a href="/preview" target="_blank">preview</a>
     </form>
   </div>
 </div>
