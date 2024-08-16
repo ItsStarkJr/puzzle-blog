@@ -1,0 +1,123 @@
+{% extends "base.html" %} {% block title %}Stark Puzzles - Add post{% endblock
+%} {% block content %}
+<header>
+  <h1>Stark Puzzles</h1>
+</header>
+<div class="main-container">
+  <div class="main-subcontainer">
+    <form action="#" method="POST">
+      <div class="difficulty">
+        <h2>Difficulty</h2>
+        <input id="difficulty-1" type="radio" name="difficulty" value="1" />
+        <label for="difficulty-1">1</label>
+        <input id="difficulty-2" type="radio" name="difficulty" value="2" />
+        <label for="difficulty-2">2</label>
+        <input id="difficulty-3" type="radio" name="difficulty" value="3" />
+        <label for="difficulty-3">3</label>
+        <input id="difficulty-4" type="radio" name="difficulty" value="4" />
+        <label for="difficulty-4">4</label>
+        <input id="difficulty-5" type="radio" name="difficulty" value="5" />
+        <label for="difficulty-5">5</label>
+      </div>
+
+      <div class="variant">
+        <h2>Variant</h2>
+        <input id="variant-yes" type="radio" name="variant" value="yes" />
+        <label for="variant-yes">Yes</label>
+        <input id="variant-no" type="radio" name="variant" value="no" />
+        <label for="variant-no">No</label>
+      </div>
+
+      <div class="genre">
+        <h2>Genre</h2>
+        <p>In case of a hybrid (multiple genres), separate genres by comma.</p>
+        <input
+          id="genre"
+          type="text"
+          name="genre"
+          size="100"
+          placeholder="Genre.."
+        />
+      </div>
+
+      <div class="tags">
+        <h2>Tags</h2>
+        <input id="drawing" type="checkbox" name="drawing" />
+        <label for="drawing">Drawing</label>
+        <input id="hybrid" type="checkbox" name="hybrid" />
+        <label for="hybrid">Hybrid</label>
+        <input id="loop" type="checkbox" name="loop" />
+        <label for="loop">Loop</label>
+        <input id="number-placement" type="checkbox" name="number-placement" />
+        <label for="number-placement">Number placement</label>
+        <input id="object-placement" type="checkbox" name="object-placement" />
+        <label for="object-placement">Object placement</label>
+        <input id="pack" type="checkbox" name="pack" />
+        <label for="pack">Pack</label>
+        <input id="path" type="checkbox" name="path" />
+        <label for="path">Path</label>
+        <input id="region-division" type="checkbox" name="region-division" />
+        <label for="region-division">Region division</label>
+        <input id="shading" type="checkbox" name="shading" />
+        <label for="shading">Shading</label>
+      </div>
+
+      <div class="title">
+        <h2>Title</h2>
+        <input
+          id="title"
+          type="text"
+          size="100"
+          name="title"
+          placeholder="Title.."
+        />
+      </div>
+
+      <div class="intro">
+        <h2>Intro</h2>
+        <textarea
+          name="intro"
+          id="intro"
+          rows="7"
+          cols="130"
+          placeholder="Intro.."
+        ></textarea>
+        <!-- <input id="intro" type="text" name="intro" placeholder="Intro.." /> -->
+      </div>
+
+      <div class="rules">
+        <h2>Rules</h2>
+        <textarea
+          name="rules"
+          id="rules"
+          rows="7"
+          cols="130"
+          placeholder="Rules.."
+        ></textarea>
+      </div>
+      <div class="links">
+        <h2>Links</h2>
+        <input
+          id="puzz.link"
+          type="text"
+          name="puzz.link"
+          placeholder="puzz.link.."
+        />
+        <input
+          id="sudokupad"
+          type="text"
+          name="sudokupad"
+          placeholder="sudokupad.."
+        />
+        <input id="penpa" type="text" name="penpa" placeholder="penpa.." />
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</div>
+
+<!-- Scripts -->
+<script src="scripts/create-post.js"></script>
+
+{% endblock %}
