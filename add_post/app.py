@@ -42,10 +42,17 @@ def submit():
         # Store the data dictionary in the session
         session["data"] = data
 
-        # with open("data.json", "w") as file:
-        #     json.dump(data, file)
-        #     print(f"Saved to data.json")
-        print(data)
+        with open("save_files/db.json", "r") as file:
+            current_db_data = json.load(file)
+            count = len(current_db_data)
+
+            updated_db_data = current_db_data
+            updated_db_data[f"{count+1} - {data["title"]}"] = data
+
+            with open("save_files/db.json", "w") as file:
+                json.dump(updated_db_data, file)
+                print(f"Saved to data.json")
+            # print(data)
 
         # return "<p>success</p>"
         return render_template("index.html", data=data)

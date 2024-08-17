@@ -40,7 +40,7 @@ body {
 }
 
 /* =========== Main container =========== */
-.main-container {
+#main-container {
   margin: 10vh auto;
   width: min(80%, 1260px);
   /* min-height: 80%; */

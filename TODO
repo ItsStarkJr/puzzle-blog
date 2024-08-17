@@ -1,11 +1,16 @@
 Upload post:
 
-- Make preview accurate
+- Make preview accurate, split intro & rules by linebreak char and split in mult P tags.
 - Integrate flask app in larger app to combine with uploading image.
+- add strip and some casefolding to inputs
+- make genres upload to a list instead of string
+- capitalization titles.
+- optimize key names for links for immediate integration in html
 
 Generate html:
 
 - Get date in post generator
+- changed intro class to intro-description, possible css work
 
 Local storage:
 
