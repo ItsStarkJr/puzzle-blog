@@ -67,7 +67,7 @@ class Generator:
         self.script_string = soup.prettify()
 
     def create_page(self) -> None:
-        self.post_page = f"{COMP_A}{self.title}{COMP_B}{self.image_file}{COMP_C}{self.create_post_classes()}{COMP_D}{self.title}{COMP_E}{self.date}{self.split_descriptions(self.intro, "intro")}{COMP_G}{self.split_descriptions(self.rules, "rules")}{COMP_H}{self.difficulty}{COMP_I}{self.create_links_string()}{COMP_J}{self.image_file}{COMP_K}"
+        self.post_page = f"{COMP_A}{self.title}{COMP_B}{self.image_file}{COMP_C}{self.create_post_classes()}{COMP_D}{self.title}{COMP_E}{self.date}{COMP_F}{self.split_descriptions(self.intro, "intro")}{COMP_G}{self.split_descriptions(self.rules, "rules")}{COMP_H}{self.difficulty}{COMP_I}{self.create_links_string()}{COMP_J}{self.image_file}{COMP_K}"
 
     def run(self) -> None:
         self.create_page()

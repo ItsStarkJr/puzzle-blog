@@ -42,7 +42,7 @@ COMP_F = """</p>
 
 COMP_G = """<h2 class="rules-title">Rules</h2>"""
 COMP_H = """<h3 class="difficulty">Difficulty: """
-COMP_I = """3/5</h3>
+COMP_I = """/5</h3>
         <div class="links">"""
 COMP_J = """</div>
         <img src="""
